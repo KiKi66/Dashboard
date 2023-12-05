@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Young+Serif&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr 4fr;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    bottom: 0;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+/* This Is SideBard */
+
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    margin: 0;
+    padding: 20px;
+    background-color: #6366f1;
+    color: white;
+}
+
+.sidebar .logo a {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    
+}
+
+.sidebar .logo img {
+    max-height: 50px;
+    max-width: 50px;
+    filter: invert(1) grayscale(1);
+}
+
+.sidebar-link a {
+    display: flex;
+    align-items: center;
+    margin: 0 auto -20px -40px;
+    gap: 15px;
+}
+
+.sidebar-link img {
+    width: 20px;
+    height: 20px;
+    filter: invert(1) grayscale(1);
+}
+
+.sidebar ul {
+    margin-bottom: 30px;
+}
+
+/* This is for Nav */
+.nav img{
+    max-width: 20px;
+    max-height: 25px;
+}
+
+.nav {
+    margin: 0;
+    padding: 20px 80px;
+    display: grid;
+    grid-row: 1 / 2;
+    grid-template-rows: 1fr 1fr;
+    box-shadow: box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;;
+}
+
+.top, .bottom {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.top {
+    margin-top: 1em;
+}
+.left-top, .left-bottom {
+    grid-column: 1 / 2;
+    display: flex;
+    
+}
+
+.left-top input {
+    width: 80%;
+    padding-left: 20px;
+    margin-left: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #e2e8f0;
+    height: 1.5rem;
+}
+
+.right-top {
+    grid-column: 2 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-40%);
+}
+
+.right-top a img, .left-top img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+#avt {
+    min-height: 3rem;
+    min-width: 3rem;
+    border-radius: 50%;
+}
+
+.left-bottom img {
+    min-height: 4.5rem;
+    min-width: 4.5rem;
+    border-radius: 50%;
+}
+
+.left-bottom h3 {
+    padding: 0 30px;
+    font-weight: bold;
+    font-size: 24px;
+    transform: translateY(30%);
+    position: relative;
+}
+
+.left-bottom h3::before {
+    content: 'Hi there,';
+    position: absolute;
+    top: -1.75rem;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.bottom .right-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-bottom button {
+    border: none;
+    background-color: #649bd8;
+    padding: 0.5rem 1.5rem;
+    margin: 10px;
+    border-radius: 15px;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    /* transition: ease-in-out; */
+}
+
+.right-bottom button:hover {
+    transform: translateY(-5px);
+}
+
+.right-bottom button:active {
+    transform: scale(0.9);
+}
+
+/* ---------Content----------*/
+.content img {
+    max-height: 20px;
+    max-width: 20px;
+}
+.content {
+    background-color: #d4d4d8;
+    grid-row: 2 /-1;
+    padding: 0px 10px 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 15px;
+    overflow: auto;
+}
+
+.content .project {
+    grid-column: 1 / 2;
+}
+
+.content .right-content {
+    grid-column: 2 / 3;
+}
+
+.project .project-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-content .card {
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+    position: relative;
+    overflow: auto;
+    max-width: 45%;
+    max-height: 45%;
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+.project-content .card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    background-color: #fb7185;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.widgets {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+/* --------Last Part------ */
+
+
+.ann-content {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.ann-content p {
+    margin: 0;
+    font-size: 12px;
+    font-family: inherit;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.ann-content p::after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+    width: 80%;
+    border-bottom: 1px solid #8d7d7d;
+}
+.ann-content p::after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+    width: 80%;
+    border-bottom: 1px solid #8d7d7d;
+}
+.ann-content:last-of-type p::after {
+    border-bottom: none;
+}
+.ann-content h4 {
+    margin: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.ann-content:first-of-type {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.ann-content:last-of-type {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.trend {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    
+    border-radius: 5px;
+}
+
+.trend .trend-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.trend-content img {
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.trend-content h5 {
+    margin-left: 10px;
+    position: relative;
+}
+
+.trend-content h5::after {
+    content: 'World Peace Builder';
+    display: block;
+    font-size: 10px;
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+.trend-content #dog2::after {
+    content: 'Super Cool';
+    display: block;
+    font-size: 10px;
+    margin-top: 5px;
+    font-weight: 300;
+}
